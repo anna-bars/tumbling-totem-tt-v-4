@@ -145,13 +145,17 @@ height: 108vh;
 
 .about {
     position: relative;
+    padding: 70px 0;
 }
 .about-section-top-divider {
     position: absolute;
     top: -66px;
     z-index: 140;
+     transition: top 0.1s ease;
 }
-
+.about-section-top-divider.scrolled {
+    top: -141px;
+}
 
 
 

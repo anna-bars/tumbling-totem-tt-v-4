@@ -140,5 +140,18 @@
 
 })();
 </script>
+<script>
+const divider = document.querySelector('.about-section-top-divider');
+
+window.addEventListener('scroll', () => {
+
+    if (window.scrollY > 100) {
+        divider.classList.add('scrolled');
+    } else {
+        divider.classList.remove('scrolled');
+    }
+
+});
+</script>
 </body>
 </html>
