@@ -136,6 +136,12 @@
 
     let ticking = false;
 
+    const leavesLeft = document.querySelector('.leaves-left');
+    const leavesRight = document.querySelector('.leaves-right');
+
+    const LEAVES_SPEED_Y = 0.18;
+    const LEAVES_SPEED_X = 0.08;
+
     function updateParallax() {
 
         const scrollY = window.scrollY;
@@ -149,6 +155,17 @@
             item.el.style.transform =
                 `translate3d(0, -${movement}px, 0)`;
         });
+
+        if (leavesLeft) {
+            const moveY = scrollY * LEAVES_SPEED_Y;
+            const moveX = scrollY * LEAVES_SPEED_X;
+            leavesLeft.style.transform = `translate3d(-${moveX}px, -${moveY}px, 0)`;
+        }
+        if (leavesRight) {
+            const moveY = scrollY * LEAVES_SPEED_Y;
+            const moveX = scrollY * LEAVES_SPEED_X;
+            leavesRight.style.transform = `translate3d(${moveX}px, -${moveY}px, 0)`;
+        }
 
         ticking = false;
     }

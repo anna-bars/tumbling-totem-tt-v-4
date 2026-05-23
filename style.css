@@ -54,6 +54,7 @@ height: 108vh;
     top: 0;
     left: 0;
     z-index: 24;
+    will-change: transform;
 }
 .leaves-right {
     width: 23%;
@@ -61,6 +62,7 @@ height: 108vh;
     top: 0;
     right: 0;
     z-index: 24;
+    will-change: transform;
 }
 
 /* layers */
