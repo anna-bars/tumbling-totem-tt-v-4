@@ -12,6 +12,20 @@ height: 108vh;
     position: relative;
     overflow: hidden;
 }
+.hero-hint-cta-text {
+    width: 100%;
+    margin: auto;
+    position: absolute;
+    bottom: 9.5%;
+    z-index: 98;
+    display: flex;
+    padding: 0 2.5%;
+    justify-content: space-between;
+}
+.hero-hint-cta-text p {
+    color: #ffffff9c;
+    font-style: italic;
+}
 .hero-cont {
     /* overflow: hidden; */
 }
@@ -91,7 +105,7 @@ height: 108vh;
 .layer-5-jungle-mid {
     width: 100%;
     position: absolute;
-    bottom: -17%;
+    bottom: -15%;
     z-index: 5;
 }
 .layer-6-jungle-front {
