@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.hero {
+height: 108vh;
+    background-image: url(./img/hero/background.png);
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+.hero-cont {
+    /* overflow: hidden; */
+}
+.heroo {
+    background: #1C617A;
+}
+.layer-1-sky,
+.layer-2-mountains,
+.layer-3-hills-back,
+.layer-4-temple,
+.layer-5-jungle-mid,
+.layer-6-jungle-front,
+.layer-7-foreground {
+    will-change: transform;
+}
+.logo {
+    width: 410px;
+    display: block;
+    margin: auto;
+    padding-top: 75px;
+}
+
+.leaves-left {
+    width: 23%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 24;
+}
+.leaves-right {
+    width: 23%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 24;
+}
+
+/* layers */
+
+
+.layer-1-sky {
+    width: 100%;
+    position: absolute;
+    bottom: 28%;
+    z-index: 1;
+}
+.bottom-line {
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+}
+.layer-2-mountains {
+    width: 100%;
+    position: absolute;
+    bottom: 19%;
+    z-index: 2;
+}
+.layer-7-foreground {
+    width: 100%;
+    position: absolute;
+    bottom: -65%;
+    z-index: 7;
+}
+.layer-3-hills-back {
+    width: 100%;
+    position: absolute;
+    bottom: 7%;
+    z-index: 3;
+}
+.layer-4-temple {
+    width: 28%;
+    position: absolute;
+    z-index: 4;
+    bottom: 7%;
+    left: 38%;
+}
+.layer-5-jungle-mid {
+    width: 100%;
+    position: absolute;
+    bottom: -17%;
+    z-index: 5;
+}
+.layer-6-jungle-front {
+    width: 100%;
+    position: absolute;
+    bottom: -30%;
+    z-index: 6;
+}
+
+.darkness {
+    position: absolute;
+    width: 100%;
+    z-index: 45;
+}
+
+.fog_olips_left {
+    width: 20%;
+    position: absolute;
+    left: 0;
+}
+.fog_olips_right {
+    width: 20%;
+    position: absolute;
+    right: 0;
+}
+
+.fog-triangle-left {
+    width: 12%;
+    position: absolute;
+    left: 5%;
+}
+.fog-triangle-right {
+    width: 11%;
+    position: absolute;
+    right: 4%;
+}
+.fog-triangle-top {
+    width: 12%;
+    position: absolute;
+    right: 7%;
+    top: 12%;
+}
+
+
+
+
+
+.foreground {}
+
+
+
+
+
+.about {
+    position: relative;
+}
+.about-section-top-divider {
+    position: absolute;
+    top: -66px;
+    z-index: 140;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

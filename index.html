@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tumbling Totem Portfolio</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="hero-cont">
+      <div class="heroo">
+          <section class="hero">
+        <img class="darkness" src="./img/hero/darkness.png" alt="">
+
+        <img class="leaves-left" src="./img/hero/leaves-vines-left.png" alt="">
+        <img class="leaves-right" src="./img/hero/leaves-vines-right.png" alt="">
+
+        <img class="logo" src="./img/hero/tumbling-totem-logo.png" alt="">
+
+            <img class="bottom-line" src="./img/hero/bottom-line.png" alt="">
+
+        <img class="layer-1-sky" src="./img/hero/layer-1-sky.png" alt="">
+        <img class="layer-2-mountains" src="./img/hero/layer-2-mountains.png" alt="">
+        <img class="layer-3-hills-back" src="./img/hero/layer-3-hills-back.png" alt="">
+        <img class="layer-4-temple" src="./img/hero/layer-4-temple.png" alt="">
+        <img class="layer-5-jungle-mid" src="./img/hero/layer-5-jungle-mid.png" alt="">
+        <img class="layer-6-jungle-front" src="./img/hero/layer-6-jungle-front.png" alt="">
+        
+            <img  class="layer-7-foreground" style="width: 100%;" src="./img/hero/layer-7-foreground.png" alt="">
+        
+        
+        <img class="fog_olips_left" src="./img/hero/fog/fog_olips_left.png" alt="">
+        <img class="fog_olips_right" src="./img/hero/fog/fog_olips_right.png" alt="">
+
+        <img class="fog-triangle-left" src="./img/hero/fog/fog-triangle-left.png" alt="">
+        <img class="fog-triangle-right" src="./img/hero/fog/fog-triangle-right.png" alt="">
+        <img class="fog-triangle-top" src="./img/hero/fog/fog-triangle-top.png" alt="">
+    </section>
+      </div>
+
+<section class="about">
+    <img class="about-section-top-divider" style="width: 100%;" src="./img/about/about-section-top-divider.png" alt="">
+    <h1>get out</h1>
+</section>
+    </div>
+
+    </div>
+
+    <div>
+        <h2>sssssssssssss</h2>
+        <h2>sssssssssssss</h2>
+        <h2>sssssssssssss</h2>
+        <h2>sssssssssssss</h2>
+        <h2>sssssssssssss</h2>
+        <h2>sssssssssssss</h2>
+        <h2>sssssssssssss</h2>
+        <h2>sssssssssssss</h2>
+        <h2>sssssssssssss</h2>
+        <h2>sssssssssssss</h2>
+        <h2>sssssssssssss</h2>
+        <h2>sssssssssssss</h2>
+    </div>
+    <div>
+        <h2>sssssssssssss</h2>
+        <h2>sssssssssssss</h2>
+        <h2>sssssssssssss</h2>
+        <h2>sssssssssssss</h2>
+        <h2>sssssssssssss</h2>
+        <h2>sssssssssssss</h2>
+        <h2>sssssssssssss</h2>
+        <h2>sssssssssssss</h2>
+        <h2>sssssssssssss</h2>
+        <h2>sssssssssssss</h2>
+        <h2>sssssssssssss</h2>
+        <h2>sssssssssssss</h2>
+    </div>
+    <div>
+        <h2>sssssssssssss</h2>
+        <h2>sssssssssssss</h2>
+        <h2>sssssssssssss</h2>
+        <h2>sssssssssssss</h2>
+        <h2>sssssssssssss</h2>
+        <h2>sssssssssssss</h2>
+        <h2>sssssssssssss</h2>
+        <h2>sssssssssssss</h2>
+        <h2>sssssssssssss</h2>
+        <h2>sssssssssssss</h2>
+        <h2>sssssssssssss</h2>
+        <h2>sssssssssssss</h2>
+    </div>
+    <script>
+(function () {
+
+    const layers = [
+        { selector: '.layer-1-sky', speed: 0.08 },
+        { selector: '.layer-2-mountains', speed: 0.14 },
+        { selector: '.layer-3-hills-back', speed: 0.22 },
+        { selector: '.layer-4-temple', speed: 0.30 },
+        { selector: '.layer-5-jungle-mid', speed: 0.455 },
+        { selector: '.layer-6-jungle-front', speed: 0.668 },
+        { selector: '.layer-7-foreground', speed: 0.754 }
+    ];
+
+    const items = layers.map(layer => {
+        return {
+            el: document.querySelector(layer.selector),
+            speed: layer.speed
+        };
+    });
+
+    let ticking = false;
+
+    function updateParallax() {
+
+        const scrollY = window.scrollY;
+
+        items.forEach(item => {
+
+            if (!item.el) return;
+
+            const movement = scrollY * item.speed;
+
+            item.el.style.transform =
+                `translate3d(0, -${movement}px, 0)`;
+        });
+
+        ticking = false;
+    }
+
+    window.addEventListener('scroll', () => {
+
+        if (!ticking) {
+
+            requestAnimationFrame(updateParallax);
+
+            ticking = true;
+        }
+
+    }, { passive: true });
+
+})();
+</script>
+</body>
+</html>
