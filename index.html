@@ -149,6 +149,7 @@
         scrollSpeed: layer.scrollSpeed
     }));
 
+<<<<<<< HEAD
     const mouseItems = MOUSE_DEPTH.map(d => ({
         el: document.querySelector(d.selector),
         mx: d.mx,
@@ -180,6 +181,15 @@
         // Lerp mouse
         smooth.x = lerp(smooth.x, mouse.x, LERP);
         smooth.y = lerp(smooth.y, mouse.y, LERP);
+=======
+    const leavesLeft = document.querySelector('.leaves-left');
+    const leavesRight = document.querySelector('.leaves-right');
+
+    const LEAVES_SPEED_Y = 0.18;
+    const LEAVES_SPEED_X = 0.08;
+
+    function updateParallax() {
+>>>>>>> a71100e2d6339e1f98189481811ea35584d9a4f5
 
         const scrollY = window.scrollY;
 
@@ -191,6 +201,7 @@
             item.el.style.transform = `translate3d(0, -${scrollMove}px, 0) scale(1.04)`;
         });
 
+<<<<<<< HEAD
         // Apply pure mouse offset to all mouse-aware elements
         // clamp keeps offset within safe range so scale(1.04) buffer always covers edges
         const MAX_X = 14;  // px — matches largest mx value
@@ -230,6 +241,20 @@
             const oy = Math.min(LEAF_M, Math.max(0, smooth.y * -LEAF_M));   // only downward
             leavesRight.style.transform = `translate3d(calc(${sx}px + ${ox}px), calc(-${sy}px + ${oy}px), 0)`;
         }
+=======
+        if (leavesLeft) {
+            const moveY = scrollY * LEAVES_SPEED_Y;
+            const moveX = scrollY * LEAVES_SPEED_X;
+            leavesLeft.style.transform = `translate3d(-${moveX}px, -${moveY}px, 0)`;
+        }
+        if (leavesRight) {
+            const moveY = scrollY * LEAVES_SPEED_Y;
+            const moveX = scrollY * LEAVES_SPEED_X;
+            leavesRight.style.transform = `translate3d(${moveX}px, -${moveY}px, 0)`;
+        }
+
+        ticking = false;
+>>>>>>> a71100e2d6339e1f98189481811ea35584d9a4f5
     }
 
     tick();
